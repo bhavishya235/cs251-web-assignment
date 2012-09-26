@@ -38,8 +38,12 @@ float:left;
 width:16%;
 height: 1%;
 padding-bottom: 0em;
-border-right:;
 }
+
+li#six{
+width:20%;
+}
+
 li a{
 letter-spacing: .1em;
 text-decoration: none;
@@ -69,13 +73,27 @@ div.transbox b{
     font-weight: 700;
 }
 span{
-position:fixed; top:47%;left:35%;
+width:45%;
+height:45%;
+position:fixed; top:45%;left:26%;
+background-color: white; 
 display: none;
 text-align: center;
 line-height: 2em;
 letter-spacing: .1em;
 z-index: 3;
 }
+
+#default{
+position: relative; left: 25%; top: 7%;
+width:60%;
+height:43%;
+display:block;
+text-align: center;
+letter-spacing: .1em;
+font-size: smaller;
+}
+
 #menu a:hover + span{
 display: block;
 }
