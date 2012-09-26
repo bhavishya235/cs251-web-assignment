@@ -1,0 +1,141 @@
+<html>
+<head>
+    <title>Room_book</title>
+    <link rel="stylesheet" type="text/css" href="event.css"/>
+</head>
+<body>
+    <div id="header">
+        <h3>EVENT MANAGEMENT</h3>
+        <form id="loginform" name="login" action="../user/user.html" method="get">
+        <label>Username:</label>
+        <input type="text" name="user"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Login"></form> 
+    </div>
+    
+    <ul id="menu">
+        <li id="one">
+            <a href="#">CS101</a>
+            <span>
+                <b><i>CS101</i></b><br>
+                <b>STATUS : </b>BOOKED<br>
+                <b>DATE : </b>28/9/2012-1/10/2012<br>
+                <b>BOOKED BY : </b>Bhavishya Mittal<br>
+                <b>PURPOSE : </b>ACA MEETING<br>
+            </span>
+        </li>
+        
+        <li id="two">
+            <a href="#">CS102</a>
+            <span>
+                <b><i>CS102</i></b><br>
+                <b>STATUS : </b>BOOKED<br>
+                <b>DATE : </b>2/10/2012-4/10/2012<br>
+                <b>BOOKED BY : </b>Professors<br>
+                <b>PURPOSE : </b>Exam Discussion<br>
+            </span>
+        </li>
+        
+        <li id="three">
+            <a href="#">CS103</a>
+            <span>
+                <b><i>CS103</i></b><br>
+                <b>STATUS : </b>VACANT<br>
+            </span>
+        </li>
+        
+        <li id="four">
+            <a href="#">CS201</a>
+            <span>
+                <b><i>CS201</i></b><br>
+                <b>STATUS : </b>BOOKED<br>
+                <b>DATE : </b>28/9/2012-1/10/2012<br>
+                <b>BOOKED BY : </b>Bhavishya Mittal<br>
+                <b>PURPOSE : </b>ACA MEETING<br>
+            </span>
+        </li>
+        
+        <li id="five">
+            <a href="#">CS202</a>
+            <span>
+                <b><i>CS202</i></b><br>
+                <b>STATUS : </b>BOOKED<br>
+                <b>DATE : </b>28/9/2012-2/10/2012<br>
+                <b>BOOKED BY : </b>Yahoo<br>
+                <b>PURPOSE : </b>Hacku<br>
+            </span>
+        </li>
+        
+        <li id="six">
+            <form name="input" action="book.html" method="get"> 
+            <select name="month">
+                <option value="1">January
+                <option value="2">February
+                <option value="3">March
+                <option value="4">April
+                <option value="5">May
+                <option value="6">June
+                <option value="7">July
+                <option value="8">August
+                <option value="9">September
+                <option value="10">October
+                <option value="11">November
+                <option value="12">December
+            </select>
+            <select name="day">
+        	<option value="1">1
+        	<option value="2">2
+        	<option value="3">3
+        	<option value="4">4
+        	<option value="5">5
+        	<option value="6">6
+        	<option value="7">7
+        	<option value="8">8
+        	<option value="9">9
+        	<option value="10">10
+        	<option value="11">11
+        	<option value="12">12
+        	<option value="13">13
+        	<option value="14">14
+        	<option value="15">15
+        	<option value="16">16
+        	<option value="17">17
+        	<option value="18">18
+        	<option value="19">19
+        	<option value="20">20
+        	<option value="21">21
+        	<option value="22">22
+        	<option value="23">23
+        	<option value="24">24
+        	<option value="25">25
+        	<option value="26">26
+        	<option value="27">27
+        	<option value="28">28
+        	<option value="29">29
+        	<option value="30">30
+        	<option value="31">31
+            </select>
+            <select name="year">
+        	<option value="2012">2012
+        	<option value="2013">2013
+        	<option value="2014">2014
+        	<option value="2015">2015
+            </select>
+            <input type="submit" value="Done"></form>
+        </li>
+    </ul>
+    
+    <div class="contentbg">
+    <div class="transbox">
+        <p id="default">
+            Date:25/10   Room: CS201  Purpose: ACA  By: Bhavishya<br>
+            Date:   Room:   Purpose: By:<br>
+            Date:   Room:   Purpose: By:<br>
+        </pre>
+
+    </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+body{
+    background:url(../images/imageheader.png) repeat-x;
+    text-align: left;
+    color: black;
+    font-family: serif;
+    font-size: 20px;
+}
+#header{
+text-transform: uppercase;
+font-family: 'Oswald', sans-serif;
+font-weight: normal;
+color: #222222;
+border: ;
+padding: 0em 0em 0em 13em;}
+
+#loginform{
+background:
+padding: .2em;
+position: absolute;top:1.5em;right:10em;
+font-family: sans-serif;
+font-size: small;
+color: purple;
+}
+
+ul {position: absolute; top: 15%; left: 2%;
+background-color: white; 
+list-style-type: none;
+width: 85%;
+height: 1%;
+margin: 0;
+padding: 1em 0em 2em 5em;
+border-bottom: groove;
+border-bottom-color: blue;}
+
+li{
+display: block;
+float:left;
+width:16%;
+height: 1%;
+padding-bottom: 0em;
+}
+
+li#six{
+width:20%;
+}
+
+li a{
+letter-spacing: .1em;
+text-decoration: none;
+}
+li a:hover{
+background: url(../images/tab2.jpg);
+padding:.7em;
+color: white;
+}
+div.contentbg{
+position:absolute; top:35%; left:15%;  
+width:70%;
+height:62%;
+background:url(../images/iitkcse.jpg) no-repeat;
+border:2px solid black;
+}
+.transbox{
+position: absolute;top: 10%;left: 8%;
+width:80%;
+height:80%;
+background-color:#ffffff;
+border:1px solid black;
+opacity:0.6;
+filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox b{
+    font-weight: 700;
+}
+span{
+width:45%;
+height:45%;
+position:fixed; top:45%;left:26%;
+background-color: white; 
+display: none;
+text-align: center;
+line-height: 2em;
+letter-spacing: .1em;
+z-index: 3;
+}
+
+#default{
+position: relative; left: 25%; top: 7%;
+width:60%;
+height:43%;
+display:block;
+text-align: center;
+letter-spacing: .1em;
+font-size: smaller;
+}
+
+#menu a:hover + span{
+display: block;
+}

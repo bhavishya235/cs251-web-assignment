@@ -1,0 +1,175 @@
+<html>
+<head>
+    <title>Bookin_Page</title>
+    <link rel="stylesheet" type="text/css" href="user.css"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+    <div id="header">
+        <h2>BOOKING</h2>
+        <form id="logoutform" name="logout" action="../home/book.html" method="get">
+        <input type="submit" value="Log Out"></form> 
+    </div>
+    <ul id="options">
+        <li id="list"><a id="present" href="user_book_room.html">Booking</b></a></li>
+        <li id="list"><a href="user_subscribe.html">Subscribe</a></li>
+        <li id="list"><a href="user_cancel_room.html">Cancel Booking</a></li>
+        <li id="list"><a href="user_status_room.html">Room Status</a></li>
+    </ul>
+    <div id="wrap">
+	<form action="#" method="post" id="contactform">
+	    <ul>
+		<li>
+		    <label>ROOM</label>
+		    <span class="fieldbox"><input type="text" name="room" value=""/></span>
+		</li>	
+    		<li>
+                    <label>Keyword</label>
+        	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
+    		</li>
+                <li>
+                    <label>Description</label>
+                    <span class="msgbox"><textarea class="area" name="description" rows="3" cols="25"></textarea></span><br><br><br>
+                </li>
+    		<li>
+                    <label>Comment</label>
+                    <span class="msgbox"><textarea class="area" name="comment" rows="3" cols="25"></textarea></span><br><br><br>
+	    	</li>
+                <li id="date">
+                <input type="radio" name="eventtype" id="onetime" value="onetime">
+                <i><b>One Time Event:</b></i><br><br>
+                    FROM:
+                    <select name="month1">
+                        <option value="1">January
+                        <option value="2">February
+                        <option value="3">March
+                        <option value="4">April
+                        <option value="5">May
+                        <option value="6">June
+                        <option value="7">July
+                        <option value="8">August
+                        <option value="9">September
+                        <option value="10">October
+                        <option value="11">November
+                        <option value="12">December
+                    </select>
+                    <select name="day1">
+                        <option value="1">1
+                        <option value="2">2
+                        <option value="3">3
+                        <option value="4">4
+                        <option value="5">5
+                        <option value="6">6
+                        <option value="7">7
+                        <option value="8">8
+                        <option value="9">9
+                        <option value="10">10
+                        <option value="11">11
+                        <option value="12">12
+                        <option value="13">13
+                        <option value="14">14
+                        <option value="15">15
+                        <option value="16">16
+                        <option value="17">17
+                        <option value="18">18
+                        <option value="19">19
+                        <option value="20">20
+                        <option value="21">21
+                        <option value="22">22
+                        <option value="23">23
+                        <option value="24">24
+                        <option value="25">25
+                        <option value="26">26
+                        <option value="27">27
+                        <option value="28">28
+                        <option value="29">29
+                        <option value="30">30
+                        <option value="31">31
+                    </select>
+                    <select name="year1">
+                        <option value="2012">2012
+                        <option value="2013">2013
+                        <option value="2014">2014
+                        <option value="2015">2015
+                    </select>
+                    <br>
+                    To:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <select name="month2">
+                        <option value="1">January
+                        <option value="2">February
+                        <option value="3">March
+                        <option value="4">April
+                        <option value="5">May
+                        <option value="6">June
+                        <option value="7">July
+                        <option value="8">August
+                        <option value="9">September
+                        <option value="10">October
+                        <option value="11">November
+                        <option value="12">December
+                    </select>
+                    <select name="day2">
+                        <option value="1">1
+                        <option value="2">2
+                        <option value="3">3
+                        <option value="4">4
+                        <option value="5">5
+                        <option value="6">6
+                        <option value="7">7
+                        <option value="8">8
+                        <option value="9">9
+                        <option value="10">10
+                        <option value="11">11
+                        <option value="12">12
+                        <option value="13">13
+                        <option value="14">14
+                        <option value="15">15
+                        <option value="16">16
+                        <option value="17">17
+                        <option value="18">18
+                        <option value="19">19
+                        <option value="20">20
+                        <option value="21">21
+                        <option value="22">22
+                        <option value="23">23
+                        <option value="24">24
+                        <option value="25">25
+                        <option value="26">26
+                        <option value="27">27
+                        <option value="28">28
+                        <option value="29">29
+                        <option value="30">30
+                        <option value="31">31
+                    </select>
+                    <select name="year2">
+                        <option value="2012">2012
+                        <option value="2013">2013
+                        <option value="2014">2014
+                        <option value="2015">2015
+                    </select>
+                    <br><br><hr>
+                    <input type="radio" name="eventtype" id="repeated" value="repeated">
+                    <i><b>Repeated Events:</b></i><br><br>
+                        <input type="checkbox" name="day" value="1">Sunday<br>
+                        <input type="checkbox" name="day" value="2">Monday<br>
+                        <input type="checkbox" name="day" value="3">Tuesday<br>
+                        <input type="checkbox" name="day" value="1">Wednesday<br>
+                        <input type="checkbox" name="day" value="1">Thursday<br>
+                        <input type="checkbox" name="day" value="1">Friday<br>
+                        <input type="checkbox" name="day" value="1">Saturday<br>
+                </li>
+                <li id="preference">
+                    <i><b>You are:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></i>
+                    <select name="pref">
+                        <option value="1"> admin
+                        <option value="2"> faculty
+                        <option value="3"> staff
+                        <option value="4"> student
+                    </select>
+                </li>
+            </ul>	
+	    <input type="submit" value="Send" id="sendbutton" name="sendbutton"/>
+	</form>
+    </div>
+</body>
+</html>
