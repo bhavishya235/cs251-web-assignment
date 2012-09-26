@@ -1,37 +1,37 @@
 <html>
 <head>
 <style type="text/css">
-div.background
-  {
-  width:500px;
-  height:250px;
-  background:url(content.png) repeat;
-  border:2px solid black;
-  }
-div.transbox
-  {
-  width:400px;
-  height:180px;
-  margin:30px 50px;
-  background-color:#ffffff;
-  border:1px solid black;
-  opacity:0.6;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
-  }
-div.transbox p
-  {
-  margin:30px 40px;
-  font-weight:bold;
-  color:#000000;
-  }
+span {
+  position: absolute;top:30%;left: 40%;
+	display: none;
+}
+#menu a:hover{
+  background-color: red;
+}
+#menu a:hover + span {
+	display: block;
+}
 </style>
 </head>
 
 <body>
-
+<ul id="menu">			
+	<li id="one">
+        <a href="#">menu
+        </a>
+        <span>This is some text that is placed in the transparent box.<br>
+        This is some text that is placed in the transparent box.<br></span>
+        </li>
+        
+	<li id="two"><a href="#"><span>This is some text in span2 that is placed in the <br>
+        transparent box.This is some text that is placed in the transparent box.<br></span>Menu Item</a></li>
+	<li id="three"><a href="#"><span>empty</span>Menu Item</a></li>			
+</ul>
 <div class="background">
 <div class="transbox">
-<p>This is some text that is placed in the transparent box.
+<span>jijijijiijijsiaijsiaj snaisisiasians ai siasiasiaisn siasia</span>
+<p>
+This is some text that is placed in the transparent box.
 This is some text that is placed in the transparent box.
 This is some text that is placed in the transparent box.
 This is some text that is placed in the transparent box.

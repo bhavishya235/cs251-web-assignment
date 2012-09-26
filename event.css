@@ -56,7 +56,7 @@ height:62%;
 background:url(iitkcse.jpg) no-repeat;
 border:2px solid black;
 }
-div.transbox{
+.transbox{
 position: absolute;top: 10%;left: 8%;
 width:80%;
 height:80%;
@@ -65,12 +65,17 @@ border:1px solid black;
 opacity:0.6;
 filter:alpha(opacity=60); /* For IE8 and earlier */
 }
-div.transbox p{
-margin: 30px 40px;
-font-weight: 500;
-letter-spacing: .1em;
-color:black;
-}
 div.transbox b{
     font-weight: 700;
+}
+span{
+position:fixed; top:47%;left:35%;
+display: none;
+text-align: center;
+line-height: 2em;
+letter-spacing: .1em;
+z-index: 3;
+}
+#menu a:hover + span{
+display: block;
 }
