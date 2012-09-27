@@ -48,7 +48,8 @@ li a{
 letter-spacing: .1em;
 text-decoration: none;
 }
-li a:hover{
+
+li a:hover {
 background: url(../images/tab2.jpg);
 padding:.7em;
 color: white;
@@ -60,7 +61,7 @@ height:62%;
 background:url(../images/iitkcse.jpg) no-repeat;
 border:2px solid black;
 }
-.transbox{
+.transbox {
 position: absolute;top: 10%;left: 8%;
 width:80%;
 height:80%;
