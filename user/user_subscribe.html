@@ -25,13 +25,22 @@
                 <li>
                     <label><b>Keyword</b></label>
         	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
-    		</li><br><br>
-                <input type="submit" value="Subscribe" name="subscribe"/>
+    		</li>
+		<li>
+		    <label><b>Before</b></label>
+			<select name="before">
+                        <option value="hour">1 hour
+                        <option value="day">1 day
+                        <option value="week">1 week
+                        <option value="month">1 month
+			</select>
+		</li>
+                <input type="submit" value="Subscribe" name="subscribe" style="position:absolute;left:40%;"/>
             </ul>
         </form>
         
 	<form action="#" method="post">
-            <div style="position: absolute;top:60%;left:30%;background: url(../images/grey.jpg); width:30%;
+            <div style="position: absolute;top:65%;left:30%;background: url(../images/grey.jpg); width:30%;
                         padding: .1em 2em 2em 3em;">
                     <label>Unsubscribe</label><hr>    
                     <input type="checkbox" name="unsubscribe" value="1">&nbsp&nbsp Hacku
