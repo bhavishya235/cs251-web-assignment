@@ -65,20 +65,22 @@ label {
 }
 
 #date{
-	position:absolute;top:10%; left: 55%;
+	position:absolute;top:8%; left: 55%;
 	background: url(../images/grey.jpg);
 	font-size:.6em;
 	font-family: sans-serif;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 #preference{
-	position:absolute;top:75%; left: 55%;
+	position:absolute;top:80%; left: 55%;
 	background: url(../images/grey.jpg);
 	font-size:.6em;
 	font-family: sans-serif;
 	padding-left:2em;
 	padding-top: 1em;
-	padding-right:6em;
+	padding-right:8em;
 }
 
 #sendbutton {

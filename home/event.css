@@ -1,5 +1,5 @@
 body{
-    background:url(../images/imageheader.png) repeat-x;
+    background:url(../images/bg4.jpg) repeat-x;repeat-y;
     text-align: left;
     color: black;
     font-family: serif;
@@ -19,7 +19,7 @@ padding: .2em;
 position: absolute;top:1.5em;right:10em;
 font-family: sans-serif;
 font-size: small;
-color: purple;
+color: black;
 }
 
 ul {position: absolute; top: 15%; left: 2%;
