@@ -68,7 +68,7 @@ width:80%;
 height:80%;
 background-color:#ffffff;
 border:1px solid black;
-opacity:0.6;
+opacity:.8;
 filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 div.transbox b{
@@ -87,15 +87,12 @@ z-index: 3;
 }
 
 #default{
-position: relative; left: 25%; top: 7%;
-width:60%;
+position: relative; left: 7%; top: 7%;
+width:80%;
 height:43%;
 display:block;
 text-align: center;
 letter-spacing: .1em;
 font-size: smaller;
 }
-
-#menu a:hover + span{
-display: block;
 }

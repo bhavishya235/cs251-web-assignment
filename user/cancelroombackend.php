@@ -19,7 +19,6 @@
     else
     {
         $N = count($Door);
-        echo $N;
         $x="'" . $Door[0];
         for($i=1; $i < $N; $i++)
         {

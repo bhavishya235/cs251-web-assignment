@@ -1,8 +1,33 @@
+<?php
+    session_start();
+    if(isset($_SESSION['user']))
+    {
+        $user = $_SESSION['user'];
+    }
+    else
+    {
+        header('Location: ../home/index.php?status=errorlog');
+    }
+     include("../home/index_content.php");
+?>
 <html>
 <head>
     <title>personalised</title>
     <link rel="stylesheet" type="text/css" href="../home/event.css"/>
     <link rel="stylesheet" type="text/css" href="user.css"/>
+     <script>
+	function view(x)
+	{
+	    //alert(x);
+	    var x0='<?php echo $x0; ?>';
+	    var x2='<?php echo $x2; ?>';
+	    var x1='<?php echo $x1; ?>';
+	    if(x==0) document.getElementById("default").innerHTML=x0;
+	    if(x==1) document.getElementById("default").innerHTML=x1;
+	    if(x==2) document.getElementById("default").innerHTML=x2;
+	    
+	}
+    </script>
 </head>
 <body>
     <div id="header">
@@ -20,35 +45,21 @@
     
     <ul id="menu" style="position:relative; top:25%;left:15%; padding-top: 0;padding-bottom: 2%;padding-right: 0%;padding-left:0%;width: 65%;">
         <li id="one" style="width: 50%;text-align: center;">
-            <a href="#" style="font-size: .7em;">CS101</a>
-            <span>
-                <b><i>CS101</i></b><br>
-                <b>STATUS : </b>BOOKED<br>
-                <b>DATE : </b>28/9/2012-1/10/2012<br>
-                <b>BOOKED BY : </b>Bhavishya Mittal<br>
-                <b>PURPOSE : </b>ACA MEETING<br>
-            </span>
+            <a href="#" onmouseover="view(1)" onmouseout="view(0)" style="font-size: .7em;">CS101</a>
         </li>
         
         <li id="two" style="width: 50%;text-align: center;">
-            <a href="#" style="font-size: .7em;">CS102</a>
-            <span>
-                <b><i>CS102</i></b><br>
-                <b>STATUS : </b>BOOKED<br>
-                <b>DATE : </b>2/10/2012-4/10/2012<br>
-                <b>BOOKED BY : </b>Professors<br>
-                <b>PURPOSE : </b>Exam Discussion<br>
-            </span>
+            <a href="#" onmouseover="view(2)" onmouseout="view(0)" style="font-size: .7em;">CS102</a>
         </li>
     </ul>
     
     <div class="contentbg">
     <div class="transbox">
         <p id="default">
-            Date:25/10   Room: CS201  Purpose: ACA  By: Bhavishya<br>
-            Date:   Room:   Purpose: By:<br>
-            Date:   Room:   Purpose: By:<br>
-        </pre>
+            <script>
+		view(0);
+	    </script>
+        </p>
 
     </div>
     </div>

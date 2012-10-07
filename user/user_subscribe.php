@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_SESSION['user']))
+    {
+        $user = $_SESSION['user'];
+    }
+    else
+    {
+        header('Location: ../home/index.php?status=errorlog');
+    }
+    //include(".php");
+?>
 <html>
 <head>
     <title>personalised</title>
@@ -26,15 +38,6 @@
                     <label><b>Keyword</b></label>
         	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
     		</li>
-		<li>
-		    <label><b>Before</b></label>
-			<select name="before">
-                        <option value="hour">1 hour
-                        <option value="day">1 day
-                        <option value="week">1 week
-                        <option value="month">1 month
-			</select>
-		</li>
                 <input type="submit" value="Subscribe" name="subscribe" style="position:absolute;left:40%;"/>
             </ul>
         </form>

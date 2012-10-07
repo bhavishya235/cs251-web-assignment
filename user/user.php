@@ -22,9 +22,21 @@
     <div>
         <b style="letter-spacing: .1em;font-size: 2em;position: absolute;top:20px;left:300px">Welcome, <?php echo $name; ?></b>
         <a href="user.php" style="position: absolute;left:90px;top:25px"><img src="../images/home.jpg" style="width: 20%";></a>
-	<button style="position: absolute;right:15%;top:3%">change password</button>
+        <i style="color:red;position: absolute;top:60px;right:150px;">
+            <?php
+                if(isset($_GET["status"]))
+                {
+                    $er=$_GET["status"];
+                    if(strcmp($er,"changed")==0)
+                    {
+                        echo "*password successfully changed"; 
+                    }
+                }
+            ?>
+        </i>
         <form id="logoutform" name="logout" action="logout.php" method="post">
-        <input type="submit" value="Log Out"></form> 
+        <input type="submit" name="submit1" value="Log Out">
+        <input type="submit" name="submit2" value="Change Password"></form>
     </div>
     
     <ul id="options">
