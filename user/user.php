@@ -10,6 +10,7 @@
         header('Location: ../home/index.php?status=errorlog');
     }
     include("user_page_content.php");
+    include("subscribecontent.php");
 ?>
 <html>
 <head>
@@ -50,11 +51,14 @@
         <ul id="usercontent2" style="background-color:grey;padding-top:0;padding-bottom: 2em;padding-left: 1em;padding-right: 1em;
                                         border: groove; position: absolute; top:30%;height: auto;width:70%;
                                         left: 8em;margin-left: 0;">
-            <li style="border-bottom: inset;"><b>My Bookinks:</b></li>
+            <li style="border-bottom: inset;"><b>My Bookings:</b></li>
             <?php
-                    echo $x;
+                echo $x;
             ?>
-            <li style="border-bottom: inset;border-top: inset"><b>My Subscribes:</b></li>
+            <li style="border-bottom: inset;border-top: inset"><b>My Subscribed Events:</b></li>
+            <?php
+                echo $x2;
+            ?>
         </ul>
 </div>
 </body>

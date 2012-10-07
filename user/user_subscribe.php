@@ -8,7 +8,7 @@
     {
         header('Location: ../home/index.php?status=errorlog');
     }
-    //include(".php");
+    include("getsubscribe.php");
 ?>
 <html>
 <head>
@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+<div style="width:1033px;height: 600px;">
     <div id="header">
         <h3 style="letter-spacing: .1em;font-size: 2em;position: absolute;top:.1%;">SUBSCRIBE</h3>
         <a href="user.php" style="position: absolute;left:10%;top:3%"><img src="../images/home.jpg" style="width: 20%";></a>
@@ -29,26 +30,50 @@
         <li id="list"><a href="user_cancel_room.php">Cancel Booking</a></li>
         <li id="list"><a href="user_status_room.php">Room Status</a></li>
     </ul>
-    
+
+    <div style="position: absolute;left: 1%;top:30%;background-color: grey;width: 25%;padding:1em 1em 1em 1em;">
+	<p>Here you can subscribe to particular keywords like "lectures,aca meeting,hacku etc".
+	    And then you will get special mention of these events on your home page when they are booked.
+	    If you no longer want their notifications you can unsubscribe them.</p>
+    </div>
     <div id="wrap">
-	<form action="#" method="post" id="contactform">
-	    <ul style="position:absolute;left: 20%; background: url(../images/grey.jpg);
+	<form action="addsubscribe.php" method="post" id="contactform">
+	    <ul style="position:absolute;left: 40%; background: url(../images/grey.jpg);
                         font-size:.6em;font-family: sans-serif;padding:4em 4em 4em 5em;">
+		<?php
+		    if(isset($_GET["status"]))
+		    {
+			$er=$_GET["status"];
+			if(strcmp($er,"empty")==0)
+			{
+			    echo "*please fill the keyword"; 
+			}
+			else if(strcmp($er,"alreadysubscribed")==0)
+			{
+			    echo "*already subscribed to this";
+			}
+			else if(strcmp($er,"subscribed")==0)
+			{
+			    echo "*successfully subscribed";
+			}
+		    }
+		?>
                 <li>
                     <label><b>Keyword</b></label>
         	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
     		</li>
-                <input type="submit" value="Subscribe" name="subscribe" style="position:absolute;left:40%;"/>
+                <input type="submit" value="Subscribe" name="subscribe" style="position:absolute;top:80%;left:40%;"/>
             </ul>
         </form>
         
-	<form action="#" method="post">
-            <div style="position: absolute;top:65%;left:30%;background: url(../images/grey.jpg); width:30%;
-                        padding: .1em 2em 2em 3em;">
-                    <label>Unsubscribe</label><hr>    
-                    <input type="checkbox" name="unsubscribe" value="1">&nbsp&nbsp Hacku
-                    <input type="checkbox" name="unsubscribe" value="2">&nbsp&nbsp ACA Meeting<br><hr>
-                    <input type="submit" value="unsubscribe" name="unsubscribe"/>
+	<form action="unsubscribe.php" method="post">
+            <div style="position: absolute;top:60%;left:32%;background: url(../images/grey.jpg); width:32%;
+                        padding: .1em 2em 2em 3em;font-size: small">
+                    <label><b>Unsubscribe</b></label><hr>
+		    <?php
+			echo $x;
+		    ?>
+		     <input type="submit" name="submit" value="unsubscribe">
             </div>
         </form>
     </div>

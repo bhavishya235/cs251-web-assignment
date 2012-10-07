@@ -31,6 +31,10 @@
 		{
 		    echo "*do not leave any feild empty "; 
 		}
+                if(strcmp($er,"used")==0)
+		{
+		    echo "*username already taken....choose another"; 
+		}
             }
     ?>
 </div>

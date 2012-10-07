@@ -6,32 +6,35 @@
     $repass=$_POST['repass'];
     $mail=$_POST['mail'];
     $address=$_POST['address'];
-    
+    $flag==0;
     $qry="SELECT* FROM userid WHERE user='$user'";
     $result=mysql_query($qry);
 	    
     //Check whether the query was successful or not
     if($_POST['name']=="" || $_POST['user']=="" || $_POST['pass']=="" || $_POST['mail']=="" || $_POST['address']=="")
     {
+	$flag=1;
 	header('Location: register.php?status=empty');
     }
     elseif($result)
     {
         if(mysql_num_rows($result) == 1)
 	{
+		$flag=1;
 	    	header('Location: register.php?status=used');
 	}
     }
-    elseif($repass != $pass)
+    if($repass != $pass)
     {
+	$flag=1;
 	header('Location: register.php?status=notsame');
     }
     
-    else
+    elseif($flag==0)
     {
 	$pass= hash('sha512', $pass);
-	$qry="INSERT INTO `cs251`.`userid` (`id`, `name`, `user`, `pass`, `timestamp`, `email`,`address`)
-		VALUES ('', '$name', '$user', '$pass', CURRENT_TIMESTAMP, '$mail','$address');";
+	$qry="INSERT INTO `cs251`.`userid` (`name`, `user`, `pass`, `timestamp`, `email`,`address`)
+		VALUES ('$name', '$user', '$pass', CURRENT_TIMESTAMP, '$mail','$address');";
 		
 	$result=mysql_query($qry);
 	if(!$result){

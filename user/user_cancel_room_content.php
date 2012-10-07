@@ -4,12 +4,12 @@
     $result=mysql_query($qry);
 	    
     //<input type="checkbox" name="cancel" value="1">&nbsp&nbsp <b>event1:</b> CS101  ACA Meeting  1/10/2012<br><hr>
+    $x=" ";
     if($result)
     {
         if(mysql_num_rows($result) != 0)
         {
             $i=1;
-            $x=" ";
             while ($row = mysql_fetch_assoc($result))
             {
 		if(((int)$i%2)==0)
