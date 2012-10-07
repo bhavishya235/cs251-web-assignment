@@ -35,7 +35,8 @@ border-bottom-color: blue;}
 li{
 display: block;
 float:left;
-width:16%;
+text-align: center;
+width:50%;
 height: 1%;
 padding-bottom: 0em;
 }
