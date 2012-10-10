@@ -19,19 +19,19 @@
             {
 		if(((int)$i%2)==0)
                 {
-		    $x2=$x2 . "<li style=\"background-color:#B0C4DE; \"><b>-><i style=\"color:green\"> " . $row['room'] .
-			    " </i>- <b style=\"color:purple\">" . $row['description'] . "</b> on <i style=\"color:red\"> " . $row['book_date']
-			    . " </i> at <i style=\"color:white\">" . $row['time'] . "hrs</i></b></li>";
+		    $x2=$x2 . '<tr style="background-color:#B0C4DE; "><th style="color:green"> ' . $row["room"] .
+			    ' </th><th style="color:purple; text-align: left">' . $row["description"] . '</th><th style="color:red">' . $row["book_date"]
+			    . '</th><th style="color:blue">' . $row["time"] . 'hrs</th></tr>';
 		}
 		else
 		{
-		    $x2=$x2 . "<li style=\"background-color:#D3D3D3; \"><b>-><i style=\"color:green\"> " . $row['room'] .
-			    " </i>- <b style=\"color:purple\">" . $row['description'] . "</b> on <i style=\"color:red\"> " . $row['book_date']
-			    . " </i> at <i style=\"color:white\">" . $row['time'] . "hrs</i></b></li>";
+		    $x2=$x2 . '<tr style="background-color:#D3D3D3; "><th style="color:green"> ' . $row["room"] .
+			    ' </th><th style="color:purple;text-align: left">' . $row["description"] . '</th><th style="color:red">' . $row["book_date"]
+			    . '</th><th style="color:blue">' . $row["time"] . 'hrs</th></tr>';
 		}
                 $i+=1;
             }
         }
-        else $x2="<li><b>------none------</b></li>";
+        else $x='<tr style="background-color:#B0C4DE; "><th style="color:green">------none------</th></tr>';
     }
 ?>

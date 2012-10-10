@@ -18,6 +18,7 @@
 
 </head>
 <body>
+<div style="width:auto;height:auto;">
     <div id="header">
         <h3 style="letter-spacing: .1em;font-size: 2em;position: absolute;top:.1%;">BOOKING</h3>
         <a href="user.php" style="position: absolute;left:10%;top:3%"><img src="../images/home.jpg" style="width: 20%";></a>
@@ -28,7 +29,7 @@
         <li id="list"><a id="present" href="user_book_room.php">Booking</b></a></li>
         <li id="list"><a href="user_subscribe.php">Subscribe</a></li>
         <li id="list"><a href="user_cancel_room.php">Cancel Booking</a></li>
-        <li id="list"><a href="user_status_room.php">Room Status</a></li>
+        <li id="list"><a href="user_status_room.php">Calendar</a></li>
     </ul>
     <div id="wrap">
 	<form action="bookroombackend.php" method="post" id="contactform">
@@ -42,7 +43,12 @@
 		</li>	
     		<li>
                     <label>Keyword</label>
-        	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
+		    <select name="keyword" class="fieldbox">
+                        <option value="aca meeting">ACA Meeting
+                        <option value="lectures">Lecture
+                        <option value="competetions">Competitions
+                        <option value="workshop">Workshop
+		    </select>
     		</li>
                 <li>
                     <label>Description</label>
@@ -50,7 +56,7 @@
                 </li>
                 <li id="date">
                 <br><br>
-                    FROM:
+                    DATE:
                     <select name="month">
                         <option value="1">January
                         <option value="2">February

@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../home/event.css"/>
 </head>
 <body>
-<div style="width:1033px;height: 600px;">
+<div style="width:auto;height:auto;">
     <div>
         <b style="letter-spacing: .1em;font-size: 2em;position: absolute;top:20px;left:300px">Welcome, <?php echo $name; ?></b>
         <a href="user.php" style="position: absolute;left:90px;top:25px"><img src="../images/home.jpg" style="width: 20%";></a>
@@ -44,22 +44,22 @@
         <li id="list"><a href="user_book_room.php">Booking</a></li>
         <li id="list"><a href="user_subscribe.php">Subscribe</a></li>
         <li id="list"><a href="user_cancel_room.php">Cancel Booking</a></li>
-        <li id="list"><a href="user_status_room.php">Room Status</a></li>
+        <li id="list"><a href="user_status_room.php">Calendar</a></li>
     </ul>
     
     
-        <ul id="usercontent2" style="background-color:grey;padding-top:0;padding-bottom: 2em;padding-left: 1em;padding-right: 1em;
+        <table id="usercontent2" style="background-color:grey;padding-top:0;padding-bottom: 2em;padding-left: 1em;padding-right: 1em;
                                         border: groove; position: absolute; top:30%;height: auto;width:70%;
                                         left: 8em;margin-left: 0;">
-            <li style="border-bottom: inset;"><b>My Bookings:</b></li>
+            <tr style="border-bottom: inset;"><th>My Bookings:</th></tr>
             <?php
                 echo $x;
             ?>
-            <li style="border-bottom: inset;border-top: inset"><b>My Subscribed Events:</b></li>
+            <tr style="border-bottom: inset;border-top: inset"><th>My Subscribed Events:</th></tr>
             <?php
                 echo $x2;
             ?>
-        </ul>
+        </table>
 </div>
 </body>
 </html>

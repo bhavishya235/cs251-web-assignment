@@ -22,6 +22,7 @@
     </script>
 </head>
 <body>
+<div style="width:auto;height:auto;">
     <div id="header">
         <h3>EVENT MANAGEMENT</h3>
         <form id="loginform" name="login" action="../user/login.php" method="post">
@@ -64,11 +65,11 @@
     
     <div class="contentbg">
     <div class="transbox">
-        <p id="default" style=" opacity: 3;" >
+        <table id="default" style=" opacity: 3;" >
 	    <script>
 		view(0);
 	    </script>
-	</p>
+	</table>
     </div>
     </div>
     

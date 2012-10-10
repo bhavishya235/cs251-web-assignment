@@ -28,7 +28,7 @@
         <li id="list"><a href="user_book_room.php">Booking</b></a></li>
         <li id="list"><a id="present" href="user_subscribe.php">Subscribe</a></li>
         <li id="list"><a href="user_cancel_room.php">Cancel Booking</a></li>
-        <li id="list"><a href="user_status_room.php">Room Status</a></li>
+        <li id="list"><a href="user_status_room.php">Calender</a></li>
     </ul>
 
     <div style="position: absolute;left: 1%;top:30%;background-color: grey;width: 25%;padding:1em 1em 1em 1em;">
@@ -60,7 +60,12 @@
 		?>
                 <li>
                     <label><b>Keyword</b></label>
-        	    <span class="fieldbox"><input type="text" name="keyword" value=""/></span>
+		    <select name="keyword">
+                        <option value="aca meeting">ACA Meeting
+                        <option value="lectures">Lecture
+                        <option value="competetions">Competitions
+                        <option value="workshop">Workshop
+		    </select>
     		</li>
                 <input type="submit" value="Subscribe" name="subscribe" style="position:absolute;top:80%;left:40%;"/>
             </ul>
