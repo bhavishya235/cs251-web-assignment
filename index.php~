@@ -7,7 +7,7 @@
             //    inside of a gigantic 521x512 black square, and
             //    then I did a bunch of random, yellow zigzags.
 
-    $file_to_grab_with_location = "test2.png";
+    $file_to_grab_with_location = "test.png";
 
     $imagick_type = new Imagick();
            

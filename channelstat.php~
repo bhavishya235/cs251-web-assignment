@@ -1,0 +1,80 @@
+<?php
+
+            // Author: holdoffhunger@gmail.com
+
+        // Create Imagick Object
+        // ---------------------------------------------
+   
+    $imagick_type = new Imagick();
+/*$imagick_type1 = new Imagick();
+$imagick_type2 = new Imagick();
+  */ 
+        // Filename to Open
+        // ---------------------------------------------
+
+    $file_to_grab_with_location = "test2.png";
+/*	$file_to_grab_with_location1 = "test.png";
+	$file_to_grab_with_location2 = "test.tiff";
+  */ 
+        // Open File
+        // ---------------------------------------------
+           
+    $file_handle_for_viewing_image_file = fopen($file_to_grab_with_location, 'a+');
+  /*  $file_handle_for_viewing_image_file1 = fopen($file_to_grab_with_location1, 'a+');
+    $file_handle_for_viewing_image_file2 = fopen($file_to_grab_with_location2, 'a+');
+*/
+        // Read File
+        // ---------------------------------------------
+
+    $imagick_type->readImageFile($file_handle_for_viewing_image_file);
+/*$imagick_type1->readImageFile($file_handle_for_viewing_image_file1);
+$imagick_type2->readImageFile($file_handle_for_viewing_image_file2);
+*/
+        // Get Statistics
+        // ---------------------------------------------
+               
+    $imagick_type_channel_statistics = $imagick_type->getImageChannelStatistics();
+/*  $imagick_type_channel_statistics1 = $imagick_type1->identifyImage();
+  $imagick_type_channel_statistics2 = $imagick_type2->identifyImage();
+*/
+
+//	$ismatte=$imagick_type->getImageMatte(); 
+//	$mattecolor=$imagick_type->getImageMatteColor();
+	$back=$imagick_type->getImageType();
+	//$back2=$imagick_type->getimageSize();	
+	echo "<pre>";
+	print_r($back);
+	//print_r($back2);
+	echo "</pre>";
+//<?php
+/*$image = new Imagick("test21.png");
+$pixels=$image->getImageHistogram();
+echo "<pre>";
+print_r($pixels);
+foreach($pixels as $p){
+ $colors = $p->getColor();
+print_r($colors);
+echo "<br>";
+/* foreach($colors as $c){
+        print( "$c\t" );
+ }
+ print( "\t:\t" . $p->getColorCount() . "\n" );
+}
+echo"</pre>";
+        // Print Statistics
+        // ---------------------------------------------
+//echo "<pre><br>";
+//	print_r($imagick_type_channel_statistics);
+//	if($ismatte) print_r($mattecolor);
+//	print_r($back);
+//echo "</pre>";
+/*
+echo "<pre> png <br>";
+    print_r($imagick_type_channel_statistics1);
+echo "</pre>";
+*/
+/*echo "<pre> tiff <br>";
+    print_r($imagick_type_channel_statistics2);
+echo "</pre>";
+*/
+?>
